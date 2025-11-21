@@ -2,12 +2,12 @@ import React from 'react';
 
 function Portfolio() {
   const projects = [
-    { title: 'E-commerce Website', image: 'https://via.placeholder.com/400x300', description: 'Modern online store' },
-    { title: 'Portfolio Design', image: 'https://via.placeholder.com/400x300', description: 'Creative portfolio site' },
-    { title: 'Blog Platform', image: 'https://via.placeholder.com/400x300', description: 'Content management system' },
-    { title: 'Mobile App UI', image: 'https://via.placeholder.com/400x300', description: 'Responsive app design' },
-    { title: 'Dashboard Analytics', image: 'https://via.placeholder.com/400x300', description: 'Data visualization' },
-    { title: 'Social Network', image: 'https://via.placeholder.com/400x300', description: 'Community platform' }
+    { title: 'E-commerce Website', image: '/enhance the uploaded.png', description: 'Modern online store' },
+    { title: 'Portfolio Design', image: '/enhance the uploaded.png', description: 'Creative portfolio site' },
+    { title: 'Blog Platform', image: '/enhance the uploaded.png', description: 'Content management system' },
+    { title: 'Mobile App UI', image: '/enhance the uploaded.png', description: 'Responsive app design' },
+    { title: 'Dashboard Analytics', image: '/enhance the uploaded.png', description: 'Data visualization' },
+    { title: 'Social Network', image: '/enhance the uploaded.png', description: 'Community platform' }
   ];
 
   return (

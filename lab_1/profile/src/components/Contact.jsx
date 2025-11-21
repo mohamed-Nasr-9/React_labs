@@ -17,7 +17,7 @@ function Contact() {
             </p>
             <p>
               <i className="fas fa-map-marker-alt me-2"></i>
-              Cairo, Egypt
+              New Cairo, Egypt
             </p>
           </div>
           <div className="col-md-6 text-md-end">

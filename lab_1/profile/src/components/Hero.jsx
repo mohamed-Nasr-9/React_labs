@@ -5,7 +5,7 @@ function Hero() {
     <section className="hero bg-dark text-white text-center py-5" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
       <div className="container">
         <img 
-          src="https://via.placeholder.com/200" 
+          src="/enhance the uploaded.png" 
           alt="Profile" 
           className="rounded-circle mb-4"
           style={{ width: '200px', height: '200px', objectFit: 'cover' }}
