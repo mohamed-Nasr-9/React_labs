@@ -1,16 +1,95 @@
-# React + Vite
+# ShopHub - E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern e-commerce application built with React, Redux Toolkit, and Vite.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+### 🛒 Shopping Basket (Redux)
+- Add/remove items
+- Increase/decrease quantities
+- Auto-calculate total price
+- Real-time basket counter in navbar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📦 Products
+- Browse products with pagination
+- View product details
+- Stock availability status
 
-## Expanding the ESLint configuration
+### 📝 Registration Form
+- Email validation (regex)
+- Username (no spaces)
+- Password validation (min 8 chars, uppercase, lowercase, digit, special char)
+- Example: `P@ssword1234`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📧 Contact Form
+- Form validation (react-hook-form + yup)
+- International phone number support
+- Success message on submit
+
+### 🌐 Language Support
+- English/Arabic switcher
+- RTL layout support
+
+---
+
+## 🛠️ Tech Stack
+
+- React 18
+- Redux Toolkit
+- React Router
+- Bootstrap 5
+- React Hook Form + Yup
+- Vite
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Install
+npm install
+
+# Run
+npm run dev
+
+# Build
+npm run build
+```
+
+---
+
+## 📁 Structure
+
+```
+src/
+├── components/      # Navbar, Cards, Pagination
+├── pages/          # Products, Cart, Register, Contact
+├── features/       # Redux slices
+├── store/          # Redux store
+└── context/        # Language context
+```
+
+---
+
+## 🔗 Routes
+
+- `/products` - Product listing
+- `/products/:id` - Product details
+- `/cart` - Shopping basket
+- `/register` - User registration
+- `/contact` - Contact form
+
+---
+
+## 👨‍💻 Author
+
+**Mohamed Nasr**  
+GitHub: [@mohamed-Nasr-9](https://github.com/mohamed-Nasr-9)
+
+---
+
+Built with ❤️ using React & Redux
+
+
