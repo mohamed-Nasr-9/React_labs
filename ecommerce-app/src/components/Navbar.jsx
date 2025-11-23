@@ -1,8 +1,11 @@
 import { NavLink, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { getBasketItemsCount } from "../features/basket/basketSlice.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
 export default function Header() {
   const { language, setLanguage } = useLanguage();
+  const totalItems = useSelector(getBasketItemsCount);
 
   const handleLanguageSwitch = (e) => setLanguage(e.target.value);
 
@@ -30,13 +33,13 @@ export default function Header() {
               </NavLink>          
             </li>
             <li className="nav-item">
-               <NavLink className="nav-link text-light" to="/">
+               <NavLink className="nav-link text-light" to="/contact">
                 Reach Us
               </NavLink>          
             </li>
             <li className="nav-item">
-               <NavLink className="nav-link text-light" to="/">
-                Info
+               <NavLink className="nav-link text-light" to="/register">
+                Register
               </NavLink>          
             </li>            
           </ul>
@@ -53,10 +56,15 @@ export default function Header() {
             </select>
 
             {}
-            <NavLink className="btn btn-warning text-dark" to="/cart">
+            <NavLink className="btn btn-warning text-dark position-relative" to="/cart">
               <i className="bi bi-basket3" /> Basket
+              {totalItems > 0 && (
+                <span className="badge bg-danger text-white position-absolute top-0 start-100 translate-middle">
+                  {totalItems}
+                </span>
+              )}
             </NavLink>
-            <NavLink className="btn btn-outline-light position-relative" to="/">
+            <NavLink className="btn btn-outline-light" to="/register">
             <i className="bi bi-person-circle" /> Sign In
             </NavLink>
 

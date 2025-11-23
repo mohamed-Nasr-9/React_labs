@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addItemToBasket } from "../features/basket/basketSlice.js";
 
 export default function ItemDetailsView() {
   const { id } = useParams();
+  const dispatch = useDispatch();
   const [itemData, setItemData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
@@ -25,6 +28,12 @@ export default function ItemDetailsView() {
 
     loadItemDetails();
   }, [id]);
+
+  const handleAddToBasket = () => {
+    if (itemData && isAvailable) {
+      dispatch(addItemToBasket(itemData));
+    }
+  };
 
   if (isLoading) return <p className="text-info">Loading item details...</p>;
   if (errorMsg) return <p className="text-danger">{errorMsg}</p>;
@@ -74,6 +83,7 @@ export default function ItemDetailsView() {
         <button
           className="btn btn-warning text-dark fw-bold mt-3 px-4"
           disabled={!isAvailable}
+          onClick={handleAddToBasket}
         >
           Add to Basket
         </button>

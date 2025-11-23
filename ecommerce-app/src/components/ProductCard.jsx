@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addItemToBasket } from "../features/basket/basketSlice.js";
 
 export default function ItemCard({ item }) {
+  const dispatch = useDispatch();
   const isAvailable = item.stock > 0;
+
+  const handleAdd = () => {
+    if (isAvailable) {
+      dispatch(addItemToBasket(item));
+    }
+  };
 
   return (
     <div className="col-md-4 col-lg-3 mb-3">
@@ -34,6 +43,7 @@ export default function ItemCard({ item }) {
             </Link>
             <button
               className="btn btn-sm btn-warning text-dark"
+              onClick={handleAdd}
               disabled={!isAvailable}
             >
               Add
